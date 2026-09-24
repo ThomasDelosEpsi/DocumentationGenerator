@@ -1,0 +1,83 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "s_body&Sequence_68",
+        "dt_logReport&Sequence_2",
+        "s_Description&Sequence_2",
+        "s_getCsDescription&Sequence_2",
+        "s_Campaign&Sequence_2",
+        "s_validateDates&Sequence_2",
+        "s_startDate&Sequence_2",
+        "s_endDate&Sequence_2",
+        "s_choixProd&Sequence_2",
+        "s_ODRProd&Sequence_2",
+        "s_checBox&Sequence_2",
+        "dr_logReport&Sequence_31",
+        "s_errorMail&Sequence_2",
+        "s_subejctMail&Sequence_2",
+        "bool_alreadyConnect&Sequence_2",
+        "idx_NumberOfIteration&Sequence_2",
+        "s_deal&Sequence_2",
+        "s_stateOfCSdesc&Sequence_2",
+        "s_UrlofEdito&Sequence_2",
+        "s_UrlOfMediaplan&Sequence_2",
+        "dt_promoMerchandisingFiltering&Sequence_2",
+        "sec_fibotPass&Sequence_17",
+        "dt_promoMerchandising&Sequence_18"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "LoginToMediaPlan.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "s_UsernameMediaPlan&Sequence_2",
+        "sec_PasswordMediaPlan&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_s_urlOfMediaplan"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Mail/SendMailErrorSuccess.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "s_body&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_s_subejectMail",
+        "in_s_reasonError"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Mediaplan/LoginToMediaPlan.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "s_UsernameMediaPlan&Sequence_2",
+        "sec_PasswordMediaPlan&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_s_urlOfMediaplan"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

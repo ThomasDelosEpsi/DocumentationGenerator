@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="3J84XmtbMUqSCCvy0p4IWA" Reference="c2JOufkPOUCf4awPp2wGqA/ZoS9MXvokki5GfabAdnLIg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://edito.lyreco.com/edito/wslogin" CVScreenId="cf710e1a-176a-4942-b0ce-89bee7b6d5f9" CvElementArea="844, 406, 81, 31" CvTextArea="860, 413, 48, 13" CvTextArgument="Validate" CvType="Button" DesignTimeRectangle="846, 407, 77, 28" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='btn primary' aaname='Validate' check:innerText='Validate' /&gt;" Guid="c297e8d2-9445-4c97-8d55-686c0fce02a8" ScopeSelectorArgument="&lt;html app='chrome.exe' title='edito.lyreco.com/edito/wslogin' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="cf525c84542e43ca63718a450a83c361.png" xmlns="">0FlIVGJQTvESzGK3eVvscyQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

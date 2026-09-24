@@ -1,0 +1,132 @@
+{
+  "name": "FR MKT Comercial Cooperation Contract V2",
+  "projectId": "8231f2df-dcea-476f-9833-109e851d4180",
+  "description": "Blank Process",
+  "main": "Main.xaml",
+  "dependencies": {
+    "Application.UI.Library": "[1.0.1-alpha.25]",
+    "UiPath.Excel.Activities": "[3.2.1]",
+    "UiPath.Mail.Activities": "[2.4.10]",
+    "UiPath.MicrosoftOffice365.Activities": "[3.4.10]",
+    "UiPath.System.Activities": "[25.10.2]",
+    "UiPath.Testing.Activities": "[25.10.0]",
+    "UiPath.UIAutomation.Activities": "[25.10.19]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "24.10.9.0",
+  "projectVersion": "1.0.1-alpha.6",
+  "runtimeOptions": {
+    "exceptionHandlerWorkflow": "GlobalHandler.xaml",
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "e8de4216-8bdc-4753-9075-cd1d40d0cf21",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Test Cases\\Temporary Folders\\Case_CreateTemporaryFolder.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "4d6a68b3-ed07-4906-8487-349db83a2ad3",
+        "executionTemplatePath": "Test With Timeout (UiPath.Testing.Activities);UiPath.Testing.Activities;Test With Timeout.xaml",
+        "testCaseType": "TestCase",
+        "executionTemplateType": "PackageFileTemplate",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Test Cases\\Login Logout\\Case_MediaplanConnection.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "e8b8d7b7-4bb1-4137-a83e-f45766d7cb76",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Test Cases\\Logs\\Case_ReadLogs.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "bee43fb5-73ea-4d6f-900a-1b43a3f4a4a1",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Test Cases\\Mediaplan Filters\\Case_ResetFilters.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "f94d1ba8-bd93-45f3-9bb9-23b43be29807",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Test Cases\\Mediaplan Filters\\Case_SetDates.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "1fe4556a-9e3c-4ec5-b48a-899def138f11",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Test Cases\\Temporary Folders\\Case_DeleteTemporaryFolder.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "5a481d64-634b-48f1-bec9-c24f412817c3",
+        "executionTemplatePath": "Test With Timeout (UiPath.Testing.Activities);UiPath.Testing.Activities;Test With Timeout.xaml",
+        "testCaseType": "TestCase",
+        "executionTemplateType": "PackageFileTemplate",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Test Cases\\UIElements\\Case_UIElementCheck.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "4fa18479-26d7-455d-a3af-7fe84bf4e3b9",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Test Cases\\Temporary Folders\\Case_CreateAssistantFolder.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "c8d32881-066c-40a5-b8ee-456196bbaae6",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Test Cases\\Accounting File\\Case_Download577.xaml"
+      }
+    ],
+    "saveToCloud": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "de88f95f-a65a-4ffd-bf1f-5ab1c4e3767a",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}

@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Click 'Validate' at login Edito",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "ZoS9MXvokki5GfabAdnLIg",
+  "Reference": "c2JOufkPOUCf4awPp2wGqA/ZoS9MXvokki5GfabAdnLIg",
+  "ParentRef": "c2JOufkPOUCf4awPp2wGqA/vvpa2qjcbUSICls8mmnApA",
+  "Created": "2024-10-15T07:46:47.4628584Z",
+  "Updated": "2024-10-15T07:47:13.9293105Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

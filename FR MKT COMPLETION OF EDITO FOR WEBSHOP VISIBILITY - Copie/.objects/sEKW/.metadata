@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Go to login Edito",
+  "Type": "App",
+  "Id": "sEKWVCOvfESuDWdy3RpbGA",
+  "Reference": "c2JOufkPOUCf4awPp2wGqA/sEKWVCOvfESuDWdy3RpbGA",
+  "Created": "2024-10-15T07:46:47.1644261Z",
+  "Updated": "2024-10-15T07:46:47.1644261Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,724 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [
+        "Cons_TemporaryFolder&",
+        "Cons_LogPath&",
+        "Cons_ConfigFileSharepoint&",
+        "Cons_MediaplanURL&"
+      ],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Addons/Login Logout/Mediaplan Connection.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "S_Username&Sequence_1",
+        "Sec_Password&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Out_S_ResultTestCase",
+        "Out_UIE_MediaplanWindow",
+        "In_S_MediaPlanURL"
+      ],
+      "ConstantsSectionElementsOrder": [
+        "Cons_MediaplanURL&",
+        "Cons_ConfigFileSharepoint&",
+        "Cons_LogPath&",
+        "Cons_TemporaryFolder&",
+        "Cons_MediaplanURL&c05f5219-af56-4d4b-916c-6bb305397be1",
+        "Cons_ConfigFileSharepoint&c05f5219-af56-4d4b-916c-6bb305397be1"
+      ],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Dict_ConfigDatatables&Sequence_1",
+        "UIE_MediaplanWindow&Sequence_1",
+        "Boolean_LogEndProcessExist&Sequence_3",
+        "Datatable_Logs&Sequence_3",
+        "Boolean_NoContractExist&Sequence_3",
+        "Boolean_ContractExist&Sequence_5",
+        "Boolean_ContractExist&Sequence_6"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Cons_MediaplanURL&",
+        "Cons_ConfigFileSharepoint&",
+        "Cons_LogPath&",
+        "Cons_TemporaryFolder&"
+      ],
+      "ConstantsSectionElementsOrder": [
+        "Cons_MediaplanURL&",
+        "Cons_ConfigFileSharepoint&",
+        "Cons_LogPath&",
+        "Cons_TemporaryFolder&",
+        "Cons_MediaplanURL&a32e1f3b-d46e-4fbd-b79a-2ba1fbca033d",
+        "Cons_ConfigFileSharepoint&a32e1f3b-d46e-4fbd-b79a-2ba1fbca033d",
+        "Cons_LogPath&a32e1f3b-d46e-4fbd-b79a-2ba1fbca033d",
+        "Cons_TemporaryFolder&a32e1f3b-d46e-4fbd-b79a-2ba1fbca033d"
+      ],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "GlobalHandler.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "answer&Sequence_1",
+        "retry&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Cons_MediaplanURL&1938f30e-39bb-416c-ab07-746c31bad1ba",
+        "Cons_ConfigFileSharepoint&1938f30e-39bb-416c-ab07-746c31bad1ba",
+        "Cons_LogPath&1938f30e-39bb-416c-ab07-746c31bad1ba"
+      ],
+      "ConstantsSectionElementsOrder": [
+        "Cons_MediaplanURL&1938f30e-39bb-416c-ab07-746c31bad1ba",
+        "Cons_ConfigFileSharepoint&1938f30e-39bb-416c-ab07-746c31bad1ba",
+        "Cons_LogPath&1938f30e-39bb-416c-ab07-746c31bad1ba",
+        "Cons_LogPath&",
+        "Cons_ConfigFileSharepoint&",
+        "Cons_MediaplanURL&"
+      ],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Test Cases/Login Logout/Case_MediaplanConnection.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "S_ResultTestCase&Sequence_1",
+        "S_MediaPlanUrl&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [
+        "Cons_ConfigFileSharepoint&",
+        "Cons_MediaplanURL&"
+      ],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Test Cases/UIElements/UIElementCheck.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "In_UIE_MediplanWindow",
+        "Out_Bool_ResultTestCase"
+      ],
+      "ConstantsSectionElementsOrder": [
+        "Cons_MediaplanURL&"
+      ],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Test Cases/UIElements/Case_UIElementCheck.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Bool_ResultTestCase&Sequence_1",
+        "UIE_MediaplanWindow&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [
+        "Cons_ConfigFileSharepoint&",
+        "Cons_MediaplanURL&"
+      ],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Reset filters.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [
+        "Cons_MediaplanURL&7f1edf0b-3927-47fd-9685-e7de553c1248",
+        "Cons_ConfigFileSharepoint&7f1edf0b-3927-47fd-9685-e7de553c1248",
+        "Cons_ConfigFileSharepoint&",
+        "Cons_MediaplanURL&"
+      ],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Test Cases/Mediaplan Filters/Case_ResetFilters.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "S_FiltersNumber&Sequence_1",
+        "UIE_MediaplanWindow&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [
+        "Cons_ConfigFileSharepoint&",
+        "Cons_MediaplanURL&"
+      ],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Addons/Mediaplan Filters/Adding media plans.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "Cons_TemporaryFolder&",
+        "Cons_LogPath&",
+        "Cons_ConfigFileSharepoint&",
+        "Cons_MediaplanURL&"
+      ],
+      "ConstantsSectionElementsOrder": [
+        "Cons_TemporaryFolder&",
+        "Cons_LogPath&",
+        "Cons_ConfigFileSharepoint&",
+        "Cons_MediaplanURL&"
+      ],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Addons/Initialization/Read Configuration file.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Datatable_Temporary&Sequence_2",
+        "Bool_ReadConfigFile&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Out_Dict_ConfigDatatables"
+      ],
+      "ConstantsSectionElementsOrder": [
+        "Cons_MediaplanURL&",
+        "Cons_ConfigFileSharepoint&",
+        "Cons_LogPath&",
+        "Cons_MediaplanURL&1938f30e-39bb-416c-ab07-746c31bad1ba",
+        "Cons_ConfigFileSharepoint&1938f30e-39bb-416c-ab07-746c31bad1ba",
+        "Cons_LogPath&1938f30e-39bb-416c-ab07-746c31bad1ba"
+      ],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Addons/Read 577 file.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "DT_Data&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Cons_MediaplanURL&",
+        "Cons_ConfigFileSharepoint&"
+      ],
+      "ConstantsSectionElementsOrder": [
+        "Cons_MediaplanURL&274d9000-57c7-4ef3-96e8-b9bdf8451395",
+        "Cons_ConfigFileSharepoint&274d9000-57c7-4ef3-96e8-b9bdf8451395",
+        "Cons_MediaplanURL&",
+        "Cons_ConfigFileSharepoint&"
+      ],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Addons/Mediaplan Filters/Adding formats.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "DicStrDT_ConfigSheet&Sequence_1",
+        "S_FormatName&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "In_UIE_MediplanWindow"
+      ],
+      "ConstantsSectionElementsOrder": [
+        "Cons_MediaplanURL&7f1edf0b-3927-47fd-9685-e7de553c1248",
+        "Cons_ConfigFileSharepoint&7f1edf0b-3927-47fd-9685-e7de553c1248"
+      ],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Choose Assistant.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "S_AssistantName&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Cons_MediaplanURL&7f1edf0b-3927-47fd-9685-e7de553c1248",
+        "Cons_ConfigFileSharepoint&7f1edf0b-3927-47fd-9685-e7de553c1248"
+      ],
+      "ConstantsSectionElementsOrder": [
+        "Cons_MediaplanURL&",
+        "Cons_ConfigFileSharepoint&",
+        "Cons_MediaplanURL&7f1edf0b-3927-47fd-9685-e7de553c1248",
+        "Cons_ConfigFileSharepoint&7f1edf0b-3927-47fd-9685-e7de553c1248"
+      ],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Addons/Mediaplan Filters/Adding Medias.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "S_MediaName&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Cons_MediaplanURL&d51b5c86-8487-497c-9f41-508e62954244",
+        "Cons_ConfigFileSharepoint&d51b5c86-8487-497c-9f41-508e62954244",
+        "Cons_LogPath&d51b5c86-8487-497c-9f41-508e62954244"
+      ],
+      "ConstantsSectionElementsOrder": [
+        "Cons_MediaplanURL&d51b5c86-8487-497c-9f41-508e62954244",
+        "Cons_ConfigFileSharepoint&d51b5c86-8487-497c-9f41-508e62954244",
+        "Cons_LogPath&d51b5c86-8487-497c-9f41-508e62954244",
+        "Cons_LogPath&",
+        "Cons_MediaplanURL&",
+        "Cons_ConfigFileSharepoint&"
+      ],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Addons/Mediaplan Filters/Adding organizations.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "DicStrDT_ConfigSheet&Sequence_1",
+        "S_OrganizationName&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Cons_MediaplanURL&7f1edf0b-3927-47fd-9685-e7de553c1248",
+        "Cons_ConfigFileSharepoint&7f1edf0b-3927-47fd-9685-e7de553c1248"
+      ],
+      "ConstantsSectionElementsOrder": [
+        "Cons_MediaplanURL&7f1edf0b-3927-47fd-9685-e7de553c1248",
+        "Cons_ConfigFileSharepoint&7f1edf0b-3927-47fd-9685-e7de553c1248",
+        "Cons_MediaplanURL&",
+        "Cons_ConfigFileSharepoint&"
+      ],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Set dates.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "Cons_MediaplanURL&",
+        "Cons_ConfigFileSharepoint&"
+      ],
+      "ConstantsSectionElementsOrder": [
+        "Cons_MediaplanURL&7f1edf0b-3927-47fd-9685-e7de553c1248",
+        "Cons_ConfigFileSharepoint&7f1edf0b-3927-47fd-9685-e7de553c1248",
+        "Cons_MediaplanURL&",
+        "Cons_ConfigFileSharepoint&"
+      ],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Loading circle.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [
+        "Cons_MediaplanURL&7f1edf0b-3927-47fd-9685-e7de553c1248",
+        "Cons_ConfigFileSharepoint&7f1edf0b-3927-47fd-9685-e7de553c1248",
+        "Cons_MediaplanURL&",
+        "Cons_ConfigFileSharepoint&"
+      ],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Case_SetDates.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "S_ResultDateAfter&Sequence_1",
+        "S_ResultDateBefore&Sequence_1",
+        "UI_MediaplanWindow&Sequence_1",
+        "S_DateBefore&Sequence_1",
+        "S_DateAfter&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Cons_MediaplanURL&c05f5219-af56-4d4b-916c-6bb305397be1",
+        "Cons_ConfigFileSharepoint&c05f5219-af56-4d4b-916c-6bb305397be1"
+      ],
+      "ConstantsSectionElementsOrder": [
+        "Cons_MediaplanURL&c05f5219-af56-4d4b-916c-6bb305397be1",
+        "Cons_ConfigFileSharepoint&c05f5219-af56-4d4b-916c-6bb305397be1",
+        "Cons_MediaplanURL&",
+        "Cons_ConfigFileSharepoint&"
+      ],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Addons/Mediaplan Filters/Set dates.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "In_UIE_MediplanWindow",
+        "In_S_DateAfter",
+        "In_S_DateBefore",
+        "Out_S_DateAfter",
+        "Out_S_DateBefore"
+      ],
+      "ConstantsSectionElementsOrder": [
+        "Cons_MediaplanURL&ef47cb31-4dbe-45a5-ae1a-ee855abf89b3",
+        "Cons_ConfigFileSharepoint&ef47cb31-4dbe-45a5-ae1a-ee855abf89b3",
+        "Cons_LogPath&ef47cb31-4dbe-45a5-ae1a-ee855abf89b3",
+        "Cons_TemporaryFolder&ef47cb31-4dbe-45a5-ae1a-ee855abf89b3"
+      ],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Addons/Mediaplan Filters/Selection Assistant.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "S_AssistantName&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Cons_TemporaryFolder&",
+        "Cons_MediaplanURL&",
+        "Cons_ConfigFileSharepoint&",
+        "Cons_LogPath&"
+      ],
+      "ConstantsSectionElementsOrder": [
+        "Cons_TemporaryFolder&",
+        "Cons_MediaplanURL&",
+        "Cons_ConfigFileSharepoint&",
+        "Cons_LogPath&"
+      ],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Addons/Mediaplan Filters/Uncheck current assistant.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "S_AssistantName&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "In_UIE_MediplanWindow",
+        "In_S_AssistantName"
+      ],
+      "ConstantsSectionElementsOrder": [
+        "Cons_TemporaryFolder&",
+        "Cons_MediaplanURL&",
+        "Cons_ConfigFileSharepoint&",
+        "Cons_LogPath&"
+      ],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Addons/Loading circle.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "Cons_MediaplanURL&",
+        "Cons_ConfigFileSharepoint&",
+        "Cons_LogPath&"
+      ],
+      "ConstantsSectionElementsOrder": [
+        "Cons_MediaplanURL&4a870fe3-43ca-42b2-ae93-4e0bfa52a704",
+        "Cons_ConfigFileSharepoint&4a870fe3-43ca-42b2-ae93-4e0bfa52a704",
+        "Cons_LogPath&4a870fe3-43ca-42b2-ae93-4e0bfa52a704",
+        "Cons_MediaplanURL&",
+        "Cons_ConfigFileSharepoint&",
+        "Cons_LogPath&"
+      ],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Addons/Logs/Read logs.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "Out_Datatable_Logs",
+        "Out_Boolean_TestCase"
+      ],
+      "ConstantsSectionElementsOrder": [
+        "Cons_TemporaryFolder&",
+        "Cons_MediaplanURL&",
+        "Cons_ConfigFileSharepoint&",
+        "Cons_LogPath&"
+      ],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Addons/Contracts/Download Contract.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "FileInfo_ContractDownloaded&Sequence_6",
+        "Boolean_ContractAlreadyDone&Sequence_1",
+        "Datatable_Logs&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "In_UIE_MediplanWindow",
+        "Out_Boolean_ContractExist",
+        "In_S_AssistantName"
+      ],
+      "ConstantsSectionElementsOrder": [
+        "Cons_MediaplanURL&61eaeffc-0e75-4ee5-b01c-173bed72de08",
+        "Cons_ConfigFileSharepoint&61eaeffc-0e75-4ee5-b01c-173bed72de08",
+        "Cons_LogPath&61eaeffc-0e75-4ee5-b01c-173bed72de08",
+        "Cons_TemporaryFolder&61eaeffc-0e75-4ee5-b01c-173bed72de08"
+      ],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Addons/Initialization/Copy log file.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Boolean_LogFileExist&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [
+        "Cons_TemporaryFolder&",
+        "Cons_MediaplanURL&",
+        "Cons_ConfigFileSharepoint&",
+        "Cons_LogPath&"
+      ],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Addons/Temporary Folders/Create Temporary Folder.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Boolean_TemporaryFolderExist&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [
+        "Cons_MediaplanURL&",
+        "Cons_ConfigFileSharepoint&",
+        "Cons_LogPath&",
+        "Cons_TemporaryFolder&",
+        "Cons_TemporaryFolder&4346d8c4-2e67-4980-862d-9bb42f9930e3",
+        "Cons_MediaplanURL&4346d8c4-2e67-4980-862d-9bb42f9930e3",
+        "Cons_ConfigFileSharepoint&4346d8c4-2e67-4980-862d-9bb42f9930e3",
+        "Cons_LogPath&4346d8c4-2e67-4980-862d-9bb42f9930e3"
+      ],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Addons/Temporary Folders/Create Assistant folder.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Boolean_FolderAsssitantExist&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Cons_MediaplanURL&",
+        "Cons_ConfigFileSharepoint&",
+        "Cons_LogPath&",
+        "Cons_TemporaryFolder&"
+      ],
+      "ConstantsSectionElementsOrder": [
+        "Cons_MediaplanURL&4346d8c4-2e67-4980-862d-9bb42f9930e3",
+        "Cons_ConfigFileSharepoint&4346d8c4-2e67-4980-862d-9bb42f9930e3",
+        "Cons_LogPath&4346d8c4-2e67-4980-862d-9bb42f9930e3",
+        "Cons_TemporaryFolder&4346d8c4-2e67-4980-862d-9bb42f9930e3",
+        "Cons_MediaplanURL&",
+        "Cons_ConfigFileSharepoint&",
+        "Cons_LogPath&",
+        "Cons_TemporaryFolder&"
+      ],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Addons/Contracts/Select contracts statuts.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "In_UIE_MediplanWindow"
+      ],
+      "ConstantsSectionElementsOrder": [
+        "Cons_MediaplanURL&",
+        "Cons_ConfigFileSharepoint&",
+        "Cons_LogPath&",
+        "Cons_TemporaryFolder&"
+      ],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Addons/Contracts/Contract management.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "S_Body&Sequence_9",
+        "S_Subject&Sequence_9",
+        "S_SupplierMail&Sequence_9",
+        "Datatable_SuppliersContact&Sequence_1",
+        "S_SupplierNumber&Sequence_9"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Cons_MediaplanURL&",
+        "Cons_ConfigFileSharepoint&",
+        "Cons_LogPath&",
+        "Cons_TemporaryFolder&"
+      ],
+      "ConstantsSectionElementsOrder": [
+        "Cons_MediaplanURL&",
+        "Cons_ConfigFileSharepoint&",
+        "Cons_LogPath&",
+        "Cons_TemporaryFolder&",
+        "Cons_MediaplanURL&a32e1f3b-d46e-4fbd-b79a-2ba1fbca033d",
+        "Cons_ConfigFileSharepoint&a32e1f3b-d46e-4fbd-b79a-2ba1fbca033d",
+        "Cons_LogPath&a32e1f3b-d46e-4fbd-b79a-2ba1fbca033d",
+        "Cons_TemporaryFolder&a32e1f3b-d46e-4fbd-b79a-2ba1fbca033d"
+      ],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Addons/Initialization/Download Repertoire Fournisseur.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Boolean_SuppliersFileExist&Sequence_1",
+        "Boolean_RetryDownload&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Cons_MediaplanURL&",
+        "Cons_ConfigFileSharepoint&",
+        "Cons_LogPath&",
+        "Cons_TemporaryFolder&"
+      ],
+      "ConstantsSectionElementsOrder": [
+        "Cons_MediaplanURL&",
+        "Cons_ConfigFileSharepoint&",
+        "Cons_LogPath&",
+        "Cons_TemporaryFolder&",
+        "Cons_MediaplanURL&0b5dcaad-3c22-4960-8fee-1703e9478138",
+        "Cons_ConfigFileSharepoint&0b5dcaad-3c22-4960-8fee-1703e9478138",
+        "Cons_LogPath&0b5dcaad-3c22-4960-8fee-1703e9478138",
+        "Cons_TemporaryFolder&0b5dcaad-3c22-4960-8fee-1703e9478138"
+      ],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Addons/Sending Emails/Sending Email Suppliers.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Boolean_MailAlreadySend&Sequence_1",
+        "Datatable_Logs&Sequence_1",
+        "Boolean_RetrySendMail&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "In_S_Contact",
+        "In_S_Subject",
+        "In_S_Body",
+        "In_S_Attachment",
+        "In_S_CCContact",
+        "In_S_AssistantName",
+        "In_S_SupplierNumber",
+        "Cons_MediaplanURL&",
+        "Cons_ConfigFileSharepoint&",
+        "Cons_LogPath&",
+        "Cons_TemporaryFolder&"
+      ],
+      "ConstantsSectionElementsOrder": [
+        "Cons_MediaplanURL&",
+        "Cons_ConfigFileSharepoint&",
+        "Cons_LogPath&",
+        "Cons_TemporaryFolder&",
+        "Cons_MediaplanURL&a32e1f3b-d46e-4fbd-b79a-2ba1fbca033d",
+        "Cons_ConfigFileSharepoint&a32e1f3b-d46e-4fbd-b79a-2ba1fbca033d",
+        "Cons_LogPath&a32e1f3b-d46e-4fbd-b79a-2ba1fbca033d",
+        "Cons_TemporaryFolder&a32e1f3b-d46e-4fbd-b79a-2ba1fbca033d"
+      ],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Addons/Initialization/Download accounting file.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Addons/Contracts/Change contract status.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Addons/Accounting File/Download 577.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Addons/Accounting File/Insert Data 577.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Addons/Sending Emails/Sending Email no contracts.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Addons/Login Logout/Logout.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Test Cases/Mediaplan Filters/Case_SetDates.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Test Cases/Temporary Folders/Case_CreateTemporaryFolder.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Test Cases/Temporary Folders/Case_DeleteTemporaryFolder.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Addons/Temporary Folders/Delete Temporary folder.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Test Cases/Temporary Folders/Case_CreateAssistantFolder.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Test Cases/Accounting File/Case_Download577.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Test Cases/Logs/Case_ReadLogs.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Addons/Accounting File/Upload 577 file.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    }
+  ]
+}

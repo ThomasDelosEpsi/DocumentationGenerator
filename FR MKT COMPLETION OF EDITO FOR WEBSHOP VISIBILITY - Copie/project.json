@@ -1,0 +1,73 @@
+{
+  "name": "FR MKT COMPLETION OF EDITO FOR WEBSHOP VISIBILITY",
+  "projectId": "51a90a9d-e562-4035-b01d-2d74a881efa5",
+  "description": "Blank Process",
+  "main": "Main.xaml",
+  "dependencies": {
+    "System.Xml.ReaderWriter": "[4.3.1]",
+    "UiPath.Callout.Activities": "[25.10.0]",
+    "UiPath.Excel.Activities": "[3.3.1]",
+    "UiPath.MicrosoftOffice365.Activities": "[2.7.22]",
+    "UiPath.System.Activities": "24.10.5",
+    "UiPath.Testing.Activities": "[24.10.1]",
+    "UiPath.UIAutomation.Activities": "[24.10.3]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "24.10.1.0",
+  "projectVersion": "1.0.6",
+  "runtimeOptions": {
+    "exceptionHandlerWorkflow": "GlobalError.xaml",
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "3a3a65e8-187d-4072-943b-d7f60884be1e",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Test\\TC_LoginToEdito.xaml"
+      }
+    ],
+    "saveToCloud": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "4edf6787-acef-4ceb-bfa5-79a3bbc8e2d4",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}

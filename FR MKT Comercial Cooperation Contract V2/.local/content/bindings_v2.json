@@ -1,0 +1,65 @@
+{
+  "version": "2.0",
+  "resources": [
+    {
+      "activityDisplayName": "[Download 577] Download '577'",
+      "activityId": "DownloadFileConnections_4",
+      "resource": "Connection",
+      "key": "209d8464-efaf-4891-820f-2fa51046e390",
+      "id": "Connection209d8464-efaf-4891-820f-2fa51046e390209d8464-efaf-4891-820f-2fa51046e390False",
+      "value": {
+        "ConnectionId": {
+          "defaultValue": "209d8464-efaf-4891-820f-2fa51046e390",
+          "isExpression": false,
+          "displayName": "Connection",
+          "description": "The connection to be used"
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2",
+        "Connector": "uipath-microsoft-onedrive",
+        "UseConnectionService": "True"
+      }
+    },
+    {
+      "activityDisplayName": "[Connection] Get Credential Mediaplan Fibot",
+      "activityId": "GetRobotCredential_1",
+      "resource": "asset",
+      "key": "FRANCE.MediaPlan-AFP",
+      "id": "assetFRANCE.MediaPlan-AFPFRANCEFalseMediaPlan-AFPFalse",
+      "value": {
+        "folderPath": {
+          "defaultValue": "FRANCE",
+          "isExpression": false
+        },
+        "name": {
+          "defaultValue": "MediaPlan-AFP",
+          "isExpression": false
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2"
+      }
+    },
+    {
+      "activityDisplayName": "[Sending Email No Contract] Send Email to suppliers",
+      "activityId": "SendMailConnections_1",
+      "resource": "Connection",
+      "key": "3d91fcf5-36c3-42e8-929c-70aca94d56e0",
+      "id": "Connection3d91fcf5-36c3-42e8-929c-70aca94d56e03d91fcf5-36c3-42e8-929c-70aca94d56e0False",
+      "value": {
+        "ConnectionId": {
+          "defaultValue": "3d91fcf5-36c3-42e8-929c-70aca94d56e0",
+          "isExpression": false,
+          "displayName": "Connection",
+          "description": "The connection to be used"
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2",
+        "Connector": "uipath-microsoft-outlook365",
+        "UseConnectionService": "True"
+      }
+    }
+  ]
+}

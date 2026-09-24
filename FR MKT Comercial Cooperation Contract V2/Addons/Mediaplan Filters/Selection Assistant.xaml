@@ -1,0 +1,280 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Choose_Assistant" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="In_UIE_MediplanWindow" Type="InArgument(ui:UiElement)" />
+    <x:Property Name="In_S_AssistantName" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>Choose_Assistant_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Choose_Assistant" sap:VirtualizedContainerService.HintSize="1091,2148" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Using the mediaplan window with the In_UIE_MediplanWindow variable" AttachMode="ByInstance" DisplayName="[Selection Assistant] Use Mediaplan HQ" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="502,2125" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InUiElement="[In_UIE_MediplanWindow]" ScopeGuid="93588f4d-7c98-483d-9743-dc37582f5c88" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="[Selection Assistant] Do in Use MediaplanHQ" sap:VirtualizedContainerService.HintSize="468,1940" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="S_AssistantName" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap2010:Annotation.AnnotationText="The variable required in the workflow because it is used in the selectors below is assigned to the workflow's input argument." DisplayName="[Selection Assistant] Assign Assitant name" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[S_AssistantName]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[In_S_AssistantName]</InArgument>
+              </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Assign>
+            <ui:LogMessage DisplayName="[Selection Assistant] Log message start" sap:VirtualizedContainerService.HintSize="434,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;[Selection Assistant] -&gt; [&quot;+S_AssistantName+&quot;] -&gt; Selection.&quot;]" />
+            <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="Click on the assistant button, we check that the search input appears." ClickType="Single" DisplayName="[Selection Assistant] Click 'Assistant' button" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,299" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="93588f4d-7c98-483d-9743-dc37582f5c88" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="lyreco.mediaplanhq.com/mediaplan/secure/accounting/listInvoices.action" CVScreenId="e1e717ac-60b8-4efe-826a-fa4dda5d597e" ContentHash="bk_y_JRF80ilcWuF9HTBpg" DesignTimeRectangle="1168, 336, 204, 30" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='*Assista* produits*' tag='BUTTON' data-id='filterSelect3305' data-toggle='dropdown' uipath-html-title='*Assista* produits*' visibleinnertext='*Assista* produits* ' /&gt;" Guid="c66d865e-474e-43b1-8809-b98a5bf1b9ea" InformativeScreenshot="9fe4de70d46e3e862fc187d5e6ea0c20.png" Reference="xaIDOfAQLU6yl0pfcQKHYg/tgy5y64-pkuHQVZmZ3TEug" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://lyreco.mediaplanhq.com/mediaplan/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="Verification target" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="lyreco.mediaplanhq.com/mediaplan/secure/accounting/listInvoices.action" CVScreenId="f282ac6c-fa5a-4fb3-aec4-60dde4ffda55" ContentHash="34C35lu54E6Smea-i89w7A" DesignTimeRectangle="67, 378, 167, 34" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='textbox' tag='INPUT' type='text' class='form-control' parentclass='bs-searchbox' role='element' parentid='mediaplanhq' aria-label='Search' /&gt;" Guid="57b8656e-50b4-4a20-b296-876ff95ca351" InformativeScreenshot="ba42a1fd5d9c614a581b188ce687d42c.png" Reference="xaIDOfAQLU6yl0pfcQKHYg/6TzKvMKdZ06CvMYDtFQ9Iw" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://lyreco.mediaplanhq.com/mediaplan/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                  </uix:VerifyExecutionOptions.Target>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="We search for the assistant in the input and verify that her name appears using the variable S_AssistantName" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="[Selection Assistant] Search Assistant" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,350" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="Simulate" ScopeIdentifier="93588f4d-7c98-483d-9743-dc37582f5c88" Text="[S_AssistantName]" Version="V5">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="lyreco.mediaplanhq.com/mediaplan/secure/accounting/listInvoices.action" CVScreenId="f282ac6c-fa5a-4fb3-aec4-60dde4ffda55" ContentHash="34C35lu54E6Smea-i89w7A" DesignTimeRectangle="67, 378, 167, 34" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='textbox' tag='INPUT' type='text' class='form-control' parentclass='bs-searchbox' role='element' parentid='mediaplanhq' aria-label='Search' /&gt;" Guid="57b8656e-50b4-4a20-b296-876ff95ca351" InformativeScreenshot="ba42a1fd5d9c614a581b188ce687d42c.png" Reference="xaIDOfAQLU6yl0pfcQKHYg/6TzKvMKdZ06CvMYDtFQ9Iw" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://lyreco.mediaplanhq.com/mediaplan/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[Nothing]" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="lyreco.mediaplanhq.com/mediaplan/secure/accounting/listInvoices.action" CVScreenId="60e2dcd9-c8b9-45e7-b1f8-2b290b63b6f8" ContentHash="C0e5KFx_80SQFg87SP_51w" DesignTimeRectangle="1209, 655, 256, 26" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aaname='* {0}' aria-role='option' parentid='mediaplanhq' class='filterSelect3305-option-*' data-tokens='{0}' visibleinnertext='{0}' /&gt;&quot;, S_AssistantName)]" Guid="8ad09a79-4f55-41e7-8305-7e175b482ef6" InformativeScreenshot="94e8eace622527831ee89b8f0ac73d25.png" Reference="xaIDOfAQLU6yl0pfcQKHYg/HEswJ9mkqUCt3ZacPUyH5g" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://lyreco.mediaplanhq.com/mediaplan/secure/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                  </uix:VerifyExecutionTypeIntoOptions.Target>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="Click on the assistant once it appears." ClickType="Single" DisplayName="[Selection Assistant] Click Assistant" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,220" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="93588f4d-7c98-483d-9743-dc37582f5c88" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="lyreco.mediaplanhq.com/mediaplan/secure/accounting/listInvoices.action" CVScreenId="60e2dcd9-c8b9-45e7-b1f8-2b290b63b6f8" ContentHash="C0e5KFx_80SQFg87SP_51w" DesignTimeRectangle="1209, 655, 256, 26" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aaname='* {0}' aria-role='option' parentid='mediaplanhq' class='filterSelect3305-option-*' data-tokens='{0}' visibleinnertext='{0}' /&gt;&quot;, S_AssistantName)]" Guid="8ad09a79-4f55-41e7-8305-7e175b482ef6" InformativeScreenshot="94e8eace622527831ee89b8f0ac73d25.png" Reference="xaIDOfAQLU6yl0pfcQKHYg/HEswJ9mkqUCt3ZacPUyH5g" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://lyreco.mediaplanhq.com/mediaplan/secure/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="We invoke the loading circle to ensure that the loading is complete." DisplayName="[Selection Assistant] Invoke Loading Circle" sap:VirtualizedContainerService.HintSize="434,219" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Addons\Loading circle.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="ui:UiElement" x:Key="In_UIE_MediplanWindow">[In_UIE_MediplanWindow]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:InvokeWorkflowFile>
+            <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="Click on 'Tous les assistant' for close dropdown and check if input seach disappears" ClickType="Single" DisplayName="[Selection Assistant] Click 'Tous les assistant' end" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,299" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="93588f4d-7c98-483d-9743-dc37582f5c88" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="lyreco.mediaplanhq.com/mediaplan/secure/accounting/listInvoices.action" CVScreenId="e1e717ac-60b8-4efe-826a-fa4dda5d597e" ContentHash="bk_y_JRF80ilcWuF9HTBpg" DesignTimeRectangle="1168, 336, 204, 30" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='*Assista* produits*' tag='BUTTON' data-id='filterSelect3305' data-toggle='dropdown' uipath-html-title='*Assista* produits*' visibleinnertext='*Assista* produits* ' /&gt;" Guid="c66d865e-474e-43b1-8809-b98a5bf1b9ea" InformativeScreenshot="9fe4de70d46e3e862fc187d5e6ea0c20.png" Reference="xaIDOfAQLU6yl0pfcQKHYg/tgy5y64-pkuHQVZmZ3TEug" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://lyreco.mediaplanhq.com/mediaplan/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="Verification target" IsLoose="True" Mode="Disappears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="lyreco.mediaplanhq.com/mediaplan/secure/accounting/listInvoices.action" CVScreenId="f282ac6c-fa5a-4fb3-aec4-60dde4ffda55" ContentHash="34C35lu54E6Smea-i89w7A" DesignTimeRectangle="67, 378, 167, 34" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='textbox' tag='INPUT' type='text' class='form-control' parentclass='bs-searchbox' role='element' parentid='mediaplanhq' aria-label='Search' /&gt;" Guid="57b8656e-50b4-4a20-b296-876ff95ca351" InformativeScreenshot="ba42a1fd5d9c614a581b188ce687d42c.png" Reference="xaIDOfAQLU6yl0pfcQKHYg/6TzKvMKdZ06CvMYDtFQ9Iw" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://lyreco.mediaplanhq.com/mediaplan/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                  </uix:VerifyExecutionOptions.Target>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <ui:LogMessage DisplayName="[Selection Assistant] Log message end" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;[Selection Assistant] -&gt; [&quot;+S_AssistantName+&quot;] -&gt; Assistant has been selected.&quot;]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+        </ActivityFunc>
+      </uix:NApplicationCard.OCREngine>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" Version="V2">
+          <uix:TargetApp.Arguments>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.Arguments>
+          <uix:TargetApp.FilePath>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.FilePath>
+          <uix:TargetApp.Selector>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.Selector>
+          <uix:TargetApp.Url>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.Url>
+          <uix:TargetApp.WorkingDirectory>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.WorkingDirectory>
+        </uix:TargetApp>
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

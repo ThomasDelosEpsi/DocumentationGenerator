@@ -1,0 +1,244 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Filters_Check" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="In_UIE_MediplanWindow" Type="InArgument(ui:UiElement)" />
+    <x:Property Name="Out_S_FiltersNumber" Type="OutArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>Filters_Check_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Filters_Check" sap:VirtualizedContainerService.HintSize="1160,2055" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="The purpose of this section is to reset the filters in MediaPlan before the file extraction process.&#xA;&#xA;We use the variable In_UIE_MediplanWindow for chrome windows" AttachMode="ByInstance" DisplayName="[Reset filters] Using the mediaplan interface" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="570,2032" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InUiElement="[In_UIE_MediplanWindow]" ScopeGuid="4d340c1c-9033-4c0d-a89b-4d0d00c447c0" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="[Reset filters] Do in  Using the mediaplan interface" sap:VirtualizedContainerService.HintSize="536,1821" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="Click on 'Comptabilité' button and check if 'Statuts des factures' appears" ClickType="Single" DisplayName="[Reset filters] Click 'Comptabilité'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="502,231" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4d340c1c-9033-4c0d-a89b-4d0d00c447c0" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="lyreco.mediaplanhq.com/mediaplan/secure/dashboard-module/home.action" CVScreenId="e72009a8-6436-4a73-ae56-e0616e173e02" ContentHash="LEkr9ns_sE2H-78x5CKM5g" CvTextArea="685, 239, 104, 15" CvTextArgument="COMPTABILITE" CvType="Text" DesignTimeRectangle="672, 231, 131, 34" DesignTimeScaleFactor="1" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl visibleinnertext='COMPTABILITÉ' tag='A' parentid='mphq-menu-invoices' /&gt;" Guid="50071187-039d-47e8-b218-2d614c6e97fe" InformativeScreenshot="cdc1434520058612f4ad5aed2094d6ef.png" Reference="xaIDOfAQLU6yl0pfcQKHYg/q05SxpXICEGuaeAZwhauFw" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://lyreco.mediaplanhq.com/*' /&gt;" SearchSteps="Selector, CV" Version="V4" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NCheckState sap2010:Annotation.AnnotationText="We ensure that the &quot;All Media Plans&quot; button is visible. Maximum 20 seconds" DisplayName="[Reset filters] Check app states 'Tout les plans médias'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="502,1530" sap2010:WorkflowViewState.IdRef="NCheckState_1" IsLoose="True" Timeout="20" Version="V5">
+              <uix:NCheckState.IfExists>
+                <Sequence sap2010:Annotation.AnnotationText="If it's visible, we'll reset the filters" DisplayName="[Reset filters] Tous les plans médias appears" sap:VirtualizedContainerService.HintSize="468,812" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="[Reset filters] Log message Reset completed" sap:VirtualizedContainerService.HintSize="434,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;[Reset filters] -&gt; Click on the 'Réinitialiser' button.&quot;]" />
+                  <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="Click on 'Réinitialiser'" ClickType="Single" DisplayName="[Reset filters] Click 'Réinitialiser'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,220" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4d340c1c-9033-4c0d-a89b-4d0d00c447c0" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="lyreco.mediaplanhq.com/mediaplan/secure/accounting/listInvoices.action" CVScreenId="4e3f989a-cb99-4480-9534-f93ad2287c06" ContentHash="1VqAMmYI_kqbqFUwN-OESQ" DesignTimeRectangle="778, 376, 84, 30" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='listInvoices' tag='A' class='btn btn-link btn-sm waiting' parentclass='form-group' visibleinnertext='Réinitialiser' /&gt;" Guid="fc3f6c20-88a1-4691-98d6-d24fed68f2af" InformativeScreenshot="e0cb5beb32e37c80153ef8eb606714c3.png" Reference="xaIDOfAQLU6yl0pfcQKHYg/aHrqsml-8UWab1ZgQwpp5g" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://lyreco.mediaplanhq.com/mediaplan/secure/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <uix:NGetText sap2010:Annotation.AnnotationText="We retrieve the number of active filters on the Mediaplan 'Comptabilité' page" DisplayName="[Reset filters] Get text filters informations" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,181" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="4d340c1c-9033-4c0d-a89b-4d0d00c447c0" TextString="[Out_S_FiltersNumber]" Version="V5">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="lyreco.mediaplanhq.com/mediaplan/secure/accounting/listInvoices.action" CVScreenId="daeb9213-03b3-4510-a820-14829be27979" ContentHash="RBSxXmWjW0O5vGO65dgXlw" DesignTimeRectangle="456, 280, 100, 34" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='button' parentid='invoiceListBodyHeader' tag='A' aaname='*filtre*' data-toggle='tooltip' href='#invoiceListFilterContainer' innertext='*filtre*' visibleinnertext='*filtre*' /&gt;" Guid="1e163a1b-7799-4b3f-8134-c6abe7ee0999" InformativeScreenshot="adc92463afe1bb2d048cfb76d241aaf1.png" Reference="xaIDOfAQLU6yl0pfcQKHYg/h-MKw0WefUOn-g_PWYOvoQ" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://lyreco.mediaplanhq.com/mediaplan/secure/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NGetText.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NGetText>
+                  <Assign sap2010:Annotation.AnnotationText="Using the regex, we retrieve only the number of the filter's retrieval variable for the unit test." DisplayName="[Reset filters] Assign Regex for filters number" sap:VirtualizedContainerService.HintSize="434,147" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[Out_S_FiltersNumber]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(Out_S_FiltersNumber, "\d+").Value]</InArgument>
+                    </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Assign>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence sap2010:Annotation.AnnotationText="Otherwise, an exception is generated, and the process terminates." DisplayName="[Reset filters] Tous les plans médias NOT appears " sap:VirtualizedContainerService.HintSize="450,377" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="[Reset filters] Log message Errors Reset" sap:VirtualizedContainerService.HintSize="416,173" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;[Reset filters] -&gt; The 'Réinitialiser' button does not appear -&gt; Process errors.&quot;]" />
+                  <Throw DisplayName="[Reset filters] Throw Exception 'Réiniailisé' not appear" Exception="[New SystemException(&quot;[Reset filters] -&gt; The 'Réinitialiser' button does not appear for resetting the filters -&gt; Process error.&quot;)]" sap:VirtualizedContainerService.HintSize="416,113" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="lyreco.mediaplanhq.com/mediaplan/secure/accounting/listInvoices.action" CVScreenId="90c7049a-6824-4716-b491-8e07738a51fb" ContentHash="hJIvJenZH0-y8mgx_4t6Yw" DesignTimeRectangle="58, 336, 309, 30" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='button' tag='BUTTON' aaname='*?lan* média*' data-toggle='dropdown' innertext='*?lan* média*' uipath-html-title='*?lan* média*' data-id='filterSelect-1' /&gt;" Guid="55a32b79-4c8c-42d6-af94-ae687de0261c" InformativeScreenshot="e332151cb909b4dabc2cd3a04adf7157.png" Reference="xaIDOfAQLU6yl0pfcQKHYg/ZAsEUJcGgk600whNAEesHQ" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://lyreco.mediaplanhq.com/mediaplan/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+        </ActivityFunc>
+      </uix:NApplicationCard.OCREngine>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" Version="V2">
+          <uix:TargetApp.Arguments>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.Arguments>
+          <uix:TargetApp.FilePath>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.FilePath>
+          <uix:TargetApp.Selector>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.Selector>
+          <uix:TargetApp.Url>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.Url>
+          <uix:TargetApp.WorkingDirectory>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.WorkingDirectory>
+        </uix:TargetApp>
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

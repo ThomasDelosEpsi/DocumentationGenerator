@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Go to login Edito",
+  "Type": "Screen",
+  "Id": "vvpa2qjcbUSICls8mmnApA",
+  "Reference": "c2JOufkPOUCf4awPp2wGqA/vvpa2qjcbUSICls8mmnApA",
+  "ParentRef": "c2JOufkPOUCf4awPp2wGqA/nnHpEZW1WU6f_j_QkJdHZw",
+  "Created": "2024-10-15T07:46:47.21491Z",
+  "Updated": "2024-10-15T07:46:47.21491Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

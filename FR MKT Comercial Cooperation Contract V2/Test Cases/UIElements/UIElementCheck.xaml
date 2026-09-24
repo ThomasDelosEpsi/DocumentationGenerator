@@ -1,0 +1,317 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="UIElementCheck" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uue="clr-namespace:UiPath.UIAutomationNext.Exceptions;assembly=UiPath.UIAutomationNext" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="In_UIE_MediplanWindow" Type="InArgument(ui:UiElement)" />
+    <x:Property Name="Out_Bool_ResultTestCase" Type="OutArgument(x:Boolean)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>UIElementCheck_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Testing</x:String>
+      <x:String>UiPath.Testing.Activities</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.UIAutomationNext.Exceptions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Testing</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="UIElementCheck" sap:VirtualizedContainerService.HintSize="1074,3553" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" DisplayName="[UIElementCheck] Use Mediaplan Website" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="574,3530" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InUiElement="[In_UIE_MediplanWindow]" IsIncognito="{x:Null}" OpenMode="{x:Null}" OutUiElement="{x:Null}" ScopeGuid="476f3ccf-f148-45de-8586-163b778f585e" Timeout="{x:Null}" UserDataFolderMode="{x:Null}" UserDataFolderPath="{x:Null}" Version="V2" WebDriverMode="{x:Null}">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="[UIElementCheck] Do in UIElementCheck" sap:VirtualizedContainerService.HintSize="540,3376" sap2010:WorkflowViewState.IdRef="Sequence_9">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickType="Single" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="[UIElementCheck] Click 'Comptabilité' menu" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="506,257" sap2010:WorkflowViewState.IdRef="NClick_1" InUiElement="{x:Null}" InteractionMode="{x:Null}" KeyModifiers="None" OutUiElement="{x:Null}" ScopeIdentifier="476f3ccf-f148-45de-8586-163b778f585e" Timeout="{x:Null}" UnblockInput="{x:Null}" Version="V5">
+              <uix:NClick.MouseButton>
+                <InArgument x:TypeArguments="uix:NMouseButton">
+                  <Literal x:TypeArguments="uix:NMouseButton" sap2010:WorkflowViewState.IdRef="Literal`1_1">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NMouseButton" />
+                    </Literal.Result>
+                  </Literal>
+                </InArgument>
+              </uix:NClick.MouseButton>
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="lyreco.mediaplanhq.com/mediaplan/secure/dashboard-module/home.action" CVScreenId="e72009a8-6436-4a73-ae56-e0616e173e02" ContentHash="LEkr9ns_sE2H-78x5CKM5g" CvTextArea="685, 239, 104, 15" CvTextArgument="COMPTABILITE" CvType="Text" DesignTimeRectangle="672, 231, 131, 34" DesignTimeScaleFactor="1" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl visibleinnertext='COMPTABILITÉ' tag='A' parentid='mphq-menu-invoices' /&gt;" Guid="50071187-039d-47e8-b218-2d614c6e97fe" InformativeScreenshot="cdc1434520058612f4ad5aed2094d6ef.png" Reference="xaIDOfAQLU6yl0pfcQKHYg/q05SxpXICEGuaeAZwhauFw" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://lyreco.mediaplanhq.com/*' /&gt;" SearchSteps="Selector, CV" Version="V4" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="Verification target" IsLoose="True" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="lyreco.mediaplanhq.com/mediaplan/secure/accounting/listInvoices.action" CVScreenId="90c7049a-6824-4716-b491-8e07738a51fb" ContentHash="hJIvJenZH0-y8mgx_4t6Yw" DesignTimeRectangle="58, 336, 309, 30" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='button' tag='BUTTON' aaname='*?lan* média*' data-toggle='dropdown' innertext='*?lan* média*' uipath-html-title='*?lan* média*' data-id='filterSelect-1' /&gt;" Guid="55a32b79-4c8c-42d6-af94-ae687de0261c" InformativeScreenshot="e332151cb909b4dabc2cd3a04adf7157.png" Reference="xaIDOfAQLU6yl0pfcQKHYg/ZAsEUJcGgk600whNAEesHQ" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://lyreco.mediaplanhq.com/mediaplan/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                  </uix:VerifyExecutionOptions.Target>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <TryCatch DisplayName="[UIElementCheck] Try Catch Highlight UI elements" sap:VirtualizedContainerService.HintSize="506,3059" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <TryCatch.Try>
+                <Sequence DisplayName="[UIElementCheck] Try Sequence Highlight" sap:VirtualizedContainerService.HintSize="468,2808" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NHighlight Color="Red" ContinueOnError="False" DelayAfter="0" DelayBefore="0" DisplayName="[UIElementCheck] Highlight Tous les plan media" HealingAgentBehavior="SameAsCard" HighlightTime="1" sap:VirtualizedContainerService.HintSize="434,190" sap2010:WorkflowViewState.IdRef="NHighlight_3" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="476f3ccf-f148-45de-8586-163b778f585e" Timeout="5" Version="V5">
+                    <uix:NHighlight.Target>
+                      <uix:TargetAnchorable BrowserURL="lyreco.mediaplanhq.com/mediaplan/secure/accounting/listInvoices.action" CVScreenId="90c7049a-6824-4716-b491-8e07738a51fb" ContentHash="hJIvJenZH0-y8mgx_4t6Yw" DesignTimeRectangle="58, 336, 309, 30" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='button' tag='BUTTON' aaname='*?lan* média*' data-toggle='dropdown' innertext='*?lan* média*' uipath-html-title='*?lan* média*' data-id='filterSelect-1' /&gt;" Guid="55a32b79-4c8c-42d6-af94-ae687de0261c" InformativeScreenshot="e332151cb909b4dabc2cd3a04adf7157.png" Reference="xaIDOfAQLU6yl0pfcQKHYg/ZAsEUJcGgk600whNAEesHQ" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://lyreco.mediaplanhq.com/mediaplan/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NHighlight.Target>
+                  </uix:NHighlight>
+                  <uix:NHighlight Color="Red" ContinueOnError="False" DelayAfter="0" DelayBefore="0" DisplayName="[UIElementCheck] Highlight toutes les organisations" HealingAgentBehavior="SameAsCard" HighlightTime="1" sap:VirtualizedContainerService.HintSize="434,190" sap2010:WorkflowViewState.IdRef="NHighlight_2" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="476f3ccf-f148-45de-8586-163b778f585e" Timeout="5" Version="V5">
+                    <uix:NHighlight.Target>
+                      <uix:TargetAnchorable BrowserURL="lyreco.mediaplanhq.com/mediaplan/secure/accounting/listInvoices.action" ContentHash="GiJ8YbbWAke0P31-7r89Eg" DesignTimeRectangle="212, 336, 164, 30" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='button' tag='BUTTON' data-id='filterSelect-2' data-toggle='dropdown' innertext='*?rganisation* ' /&gt;" Guid="83ea4010-7762-4e13-aea4-b376e032cbe9" InformativeScreenshot="538d1a05c2cbe4ae356100cb4d768eb2.png" Reference="xaIDOfAQLU6yl0pfcQKHYg/kI39bBaSzkCcg-6m_mmN2Q" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://lyreco.mediaplanhq.com/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NHighlight.Target>
+                  </uix:NHighlight>
+                  <uix:NHighlight Color="Red" ContinueOnError="False" DelayAfter="0" DelayBefore="0" DisplayName="[UIElementCheck] Highlight toutes les catégories de médias" HealingAgentBehavior="SameAsCard" HighlightTime="1" sap:VirtualizedContainerService.HintSize="434,190" sap2010:WorkflowViewState.IdRef="NHighlight_12" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="476f3ccf-f148-45de-8586-163b778f585e" Timeout="5" Version="V5">
+                    <uix:NHighlight.Target>
+                      <uix:TargetAnchorable BrowserURL="lyreco.mediaplanhq.com/mediaplan/secure/accounting/listInvoices.action" CVScreenId="ddfe9db4-4c6f-4a6d-afde-bdc06fcf5d21" ContentHash="p23ipLi0e0mvGIet4HzfBQ" DesignTimeRectangle="383, 336, 207, 30" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='button' tag='BUTTON' data-id='filterSelect-8' data-toggle='dropdown' aaname='*?atégorie*' innertext='*?atégorie*' /&gt;" Guid="beb9dc21-1956-4810-94bb-66809c54e477" InformativeScreenshot="4cbd6264ffd716e16c539c93e060e41d.png" Reference="xaIDOfAQLU6yl0pfcQKHYg/8iOqFLXfq0-oORzknkjTng" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://lyreco.mediaplanhq.com/mediaplan/secure/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NHighlight.Target>
+                  </uix:NHighlight>
+                  <uix:NHighlight Color="Red" ContinueOnError="False" DelayAfter="0" DelayBefore="0" DisplayName="[UIElementCheck] Highlight Status des factures" HealingAgentBehavior="SameAsCard" HighlightTime="1" sap:VirtualizedContainerService.HintSize="434,190" sap2010:WorkflowViewState.IdRef="NHighlight_8" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="476f3ccf-f148-45de-8586-163b778f585e" Timeout="5" Version="V5">
+                    <uix:NHighlight.Target>
+                      <uix:TargetAnchorable BrowserURL="lyreco.mediaplanhq.com/mediaplan/secure/accounting/listInvoices.action" CVScreenId="6858cd4b-9176-4ea7-bebb-468f1093476c" ContentHash="yibU_uDDAEapzwQ7vTc2SA" DesignTimeRectangle="597, 336, 181, 30" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='button' tag='BUTTON' data-id='filterSelect-15' data-toggle='dropdown' type='button' /&gt;" Guid="527947e5-9101-4831-89f2-52da0610d929" InformativeScreenshot="f35af1b54638eed3eac973ddd7d56f4f.png" Reference="xaIDOfAQLU6yl0pfcQKHYg/eRaBx5wRTE2ZdYUdn_Orow" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://lyreco.mediaplanhq.com/mediaplan/secure/accounting/listInvoices.action?rnd=1759305423346' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NHighlight.Target>
+                  </uix:NHighlight>
+                  <uix:NHighlight Color="Red" ContinueOnError="False" DelayAfter="0" DelayBefore="0" DisplayName="[UIElementCheck] Highlight Tous les statuts" HealingAgentBehavior="SameAsCard" HighlightTime="1" sap:VirtualizedContainerService.HintSize="434,190" sap2010:WorkflowViewState.IdRef="NHighlight_13" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="476f3ccf-f148-45de-8586-163b778f585e" Timeout="5" Version="V5">
+                    <uix:NHighlight.Target>
+                      <uix:TargetAnchorable BrowserURL="lyreco.mediaplanhq.com/mediaplan/secure/accounting/listInvoices.action" CVScreenId="6de21e65-d6ac-4783-9d3a-872a657509c1" ContentHash="85vpACSri0qzgcJTRFmDLA" DesignTimeRectangle="785, 336, 118, 30" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='*?tatut*' aria-role='button' tag='BUTTON' data-id='filterSelect-9' data-toggle='dropdown' visibleinnertext='*?tatut*' /&gt;" Guid="1668b0e5-7abc-45f9-98eb-a6a6d536d67b" InformativeScreenshot="fb085a493ae71e2e92d9c38f0aaf9210.png" Reference="xaIDOfAQLU6yl0pfcQKHYg/D48BrQV-RE6qDEyOVb-OUg" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://lyreco.mediaplanhq.com/mediaplan/secure/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NHighlight.Target>
+                  </uix:NHighlight>
+                  <uix:NHighlight Color="Red" ContinueOnError="False" DelayAfter="0" DelayBefore="0" DisplayName="[UIElementCheck] Highlight Tous les format" HealingAgentBehavior="SameAsCard" HighlightTime="1" sap:VirtualizedContainerService.HintSize="434,190" sap2010:WorkflowViewState.IdRef="NHighlight_5" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="476f3ccf-f148-45de-8586-163b778f585e" Timeout="5" Version="V5">
+                    <uix:NHighlight.Target>
+                      <uix:TargetAnchorable BrowserURL="lyreco.mediaplanhq.com/mediaplan/secure/accounting/listInvoices.action" CVScreenId="e2264845-6f25-4ea5-982e-c19137faabbe" ContentHash="iBlic4af7kmIJhNOdYuekA" DesignTimeRectangle="910, 336, 123, 30" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='button' tag='BUTTON' data-toggle='dropdown' data-id='filterSelect-30' aaname='*?ormat*' /&gt;" Guid="2e8db601-23c4-4fb0-88b6-3a87b76e827f" InformativeScreenshot="cb17d020f443695d125ec2dead91e9fe.png" Reference="xaIDOfAQLU6yl0pfcQKHYg/TyINOhxjbUm8s2S5dvvrzg" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://lyreco.mediaplanhq.com/mediaplan/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NHighlight.Target>
+                  </uix:NHighlight>
+                  <uix:NHighlight Color="Red" ContinueOnError="False" DelayAfter="0" DelayBefore="0" DisplayName="[UIElementCheck] Highlight Tous les média" HealingAgentBehavior="SameAsCard" HighlightTime="1" sap:VirtualizedContainerService.HintSize="434,190" sap2010:WorkflowViewState.IdRef="NHighlight_4" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="476f3ccf-f148-45de-8586-163b778f585e" Timeout="5" Version="V5">
+                    <uix:NHighlight.Target>
+                      <uix:TargetAnchorable BrowserURL="lyreco.mediaplanhq.com/mediaplan/secure/accounting/listInvoices.action" CVScreenId="7ae736b0-06ef-4a28-b2cc-cd358ed7d9e2" ContentHash="Uyl7FAc5SUeN2eDkJX9xNg" DesignTimeRectangle="1040, 336, 121, 30" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='button' tag='BUTTON' data-id='filterSelect-16' /&gt;" Guid="b8acc19e-bcae-43e5-b05e-649b22d7b604" InformativeScreenshot="ad41999ac175343efbc6c70a7fb53814.png" Reference="xaIDOfAQLU6yl0pfcQKHYg/FuF1Dr-K3EqlLqtDETY6-Q" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://lyreco.mediaplanhq.com/mediaplan/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NHighlight.Target>
+                  </uix:NHighlight>
+                  <uix:NHighlight Color="Red" ContinueOnError="False" DelayAfter="0" DelayBefore="0" DisplayName="[UIElementCheck] Highlight Tous les Assitantes" HealingAgentBehavior="SameAsCard" HighlightTime="1" sap:VirtualizedContainerService.HintSize="434,190" sap2010:WorkflowViewState.IdRef="NHighlight_6" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="476f3ccf-f148-45de-8586-163b778f585e" Timeout="5" Version="V5">
+                    <uix:NHighlight.Target>
+                      <uix:TargetAnchorable BrowserURL="lyreco.mediaplanhq.com/mediaplan/secure/accounting/listInvoices.action" CVScreenId="e1e717ac-60b8-4efe-826a-fa4dda5d597e" ContentHash="bk_y_JRF80ilcWuF9HTBpg" DesignTimeRectangle="1168, 336, 204, 30" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='*Assista* produits*' tag='BUTTON' data-id='filterSelect3305' data-toggle='dropdown' uipath-html-title='*Assista* produits*' visibleinnertext='*Assista* produits* ' /&gt;" Guid="c66d865e-474e-43b1-8809-b98a5bf1b9ea" InformativeScreenshot="9fe4de70d46e3e862fc187d5e6ea0c20.png" Reference="xaIDOfAQLU6yl0pfcQKHYg/tgy5y64-pkuHQVZmZ3TEug" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://lyreco.mediaplanhq.com/mediaplan/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NHighlight.Target>
+                  </uix:NHighlight>
+                  <uix:NHighlight Color="Red" ContinueOnError="False" DelayAfter="0" DelayBefore="0" DisplayName="[UIElementCheck] Highlight Tous les Couts" HealingAgentBehavior="SameAsCard" HighlightTime="1" sap:VirtualizedContainerService.HintSize="434,190" sap2010:WorkflowViewState.IdRef="NHighlight_14" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="476f3ccf-f148-45de-8586-163b778f585e" Timeout="5" Version="V5">
+                    <uix:NHighlight.Target>
+                      <uix:TargetAnchorable BrowserURL="lyreco.mediaplanhq.com/mediaplan/secure/accounting/listInvoices.action" CVScreenId="2da90849-120c-4927-9602-0d90879e1803" ContentHash="pWVF4lrhEUyjw1CUu1b28w" DesignTimeRectangle="1556, 336, 111, 30" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='*?oût*' aria-role='button' tag='BUTTON' data-id='filterSelect-32' visibleinnertext='*?oût*' /&gt;" Guid="4254c9e8-3fac-4675-89e3-76853565345b" InformativeScreenshot="0be786dfb2ca9ebca74f636b0beea444.png" Reference="xaIDOfAQLU6yl0pfcQKHYg/ro0vJmpo7UufLISwjimAZA" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://lyreco.mediaplanhq.com/mediaplan/secure/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NHighlight.Target>
+                  </uix:NHighlight>
+                  <uix:NHighlight Color="Red" ContinueOnError="False" DelayAfter="0" DelayBefore="0" DisplayName="[UIElementCheck] Highlight Date De" HealingAgentBehavior="SameAsCard" HighlightTime="1" sap:VirtualizedContainerService.HintSize="434,190" sap2010:WorkflowViewState.IdRef="NHighlight_10" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="476f3ccf-f148-45de-8586-163b778f585e" Timeout="5" Version="V5">
+                    <uix:NHighlight.Target>
+                      <uix:TargetAnchorable BrowserURL="lyreco.mediaplanhq.com/mediaplan/secure/accounting/listInvoices.action" CVScreenId="f33c838b-3f0e-4b43-a24c-8d8ca707354e" ContentHash="DUgePSderkCekKsSHn31pQ" DesignTimeRectangle="510, 376, 108, 30" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='listInvoices_dataListInput_startDateText' tag='INPUT' aaname='                De             ' class='form-control hasDatepicker' name='dataListInput.startDateText' /&gt;" Guid="c9fa1622-fba5-432e-b8fa-bf7092e3b009" InformativeScreenshot="78c6f345d246f4315d4b3ac0945bcb1e.png" Reference="xaIDOfAQLU6yl0pfcQKHYg/YTQ4zHQPPU6yOjPtuwESXw" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://lyreco.mediaplanhq.com/mediaplan/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NHighlight.Target>
+                  </uix:NHighlight>
+                  <uix:NHighlight Color="Red" ContinueOnError="False" DelayAfter="0" DelayBefore="0" DisplayName="[UIElementCheck] Highlight Date A" HealingAgentBehavior="SameAsCard" HighlightTime="1" sap:VirtualizedContainerService.HintSize="434,190" sap2010:WorkflowViewState.IdRef="NHighlight_9" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="476f3ccf-f148-45de-8586-163b778f585e" Timeout="5" Version="V5">
+                    <uix:NHighlight.Target>
+                      <uix:TargetAnchorable BrowserURL="lyreco.mediaplanhq.com/mediaplan/secure/accounting/listInvoices.action" CVScreenId="c7b5130c-a417-4221-9623-5278d86244d8" ContentHash="P4vhiozk7UCEWHyHmqIUbA" DesignTimeRectangle="668, 376, 108, 30" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='listInvoices_dataListInput_endDateText' tag='INPUT' aaname='                À             ' name='dataListInput.endDateText' /&gt;" Guid="fad68494-320a-42b7-a17b-0af9b350e592" InformativeScreenshot="47a2ac832ee7941ac541b92d30aa8242.png" Reference="xaIDOfAQLU6yl0pfcQKHYg/-7SfsvabRkmJkdBLetQ2Lg" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://lyreco.mediaplanhq.com/mediaplan/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NHighlight.Target>
+                  </uix:NHighlight>
+                  <uix:NHighlight Color="Red" ContinueOnError="False" DelayAfter="0" DelayBefore="0" DisplayName="[UIElementCheck] Highlight Go" HealingAgentBehavior="SameAsCard" HighlightTime="1" sap:VirtualizedContainerService.HintSize="434,190" sap2010:WorkflowViewState.IdRef="NHighlight_11" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="476f3ccf-f148-45de-8586-163b778f585e" Timeout="5" Version="V5">
+                    <uix:NHighlight.Target>
+                      <uix:TargetAnchorable BrowserURL="lyreco.mediaplanhq.com/mediaplan/secure/accounting/listInvoices.action" CVScreenId="a86271e4-139f-4e7f-8927-73821789cd48" ContentHash="sdPildIGJE6flYp0A4DlOQ" DesignTimeRectangle="783, 376, 38, 30" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='listInvoices_0' tag='INPUT' aaname='Go' type='submit' value='Go' /&gt;" Guid="9d0ae97b-fca5-468d-8f52-3e2cdbdb04d3" InformativeScreenshot="c94bf15a46c187780ff7860a2572df7d.png" Reference="xaIDOfAQLU6yl0pfcQKHYg/NuBxvOgiSkGLRTgFTQ7FqQ" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://lyreco.mediaplanhq.com/mediaplan/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NHighlight.Target>
+                  </uix:NHighlight>
+                  <uix:NHighlight Color="Red" ContinueOnError="False" DelayAfter="0" DelayBefore="0" DisplayName="[UIElementCheck] Highlight Table" HealingAgentBehavior="SameAsCard" HighlightTime="1" sap:VirtualizedContainerService.HintSize="434,190" sap2010:WorkflowViewState.IdRef="NHighlight_7" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="476f3ccf-f148-45de-8586-163b778f585e" Timeout="5" Version="V5">
+                    <uix:NHighlight.Target>
+                      <uix:TargetAnchorable BrowserURL="lyreco.mediaplanhq.com/mediaplan/secure/accounting/listInvoices.action" ContentHash="lEBQJyhTh0CCDEpxx83Oag" DesignTimeRectangle="58, 465, 1805, 4208" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='tableBulkActions' tag='DIV' visibleinnertext='*Actions*' parentclass='table-scroll' parentname='tableBulkActions' /&gt;" Guid="b89bcbfb-f8ae-4d3f-9c72-95339ebb286a" InformativeScreenshot="b31f6c27a0ecbbb68b8d6e2a7228435d.png" Reference="xaIDOfAQLU6yl0pfcQKHYg/dvgia3AiKkm48euKjcCHbA" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://lyreco.mediaplanhq.com/mediaplan/secure/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NHighlight.Target>
+                  </uix:NHighlight>
+                  <ui:LogMessage DisplayName="[UIElementCheck] Log Appears Elements Media" sap:VirtualizedContainerService.HintSize="434,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="{x:Null}" Message="[&quot;[TDD UIElementCheck] -&gt; All buttons have been found -&gt; [Completed]&quot;]" />
+                  <Assign DisplayName="[UIElementCheck] Assign Bool Result to True" sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Boolean">[Out_Bool_ResultTestCase]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="uue:NodeNotFoundException" sap:VirtualizedContainerService.HintSize="472,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ActivityAction x:TypeArguments="uue:NodeNotFoundException">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="uue:NodeNotFoundException" Name="exception" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="[UIElementCheck] Catch NodeNotFound" sap:VirtualizedContainerService.HintSize="468,342" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="[UIElementCheck] Log Not Appears Elements Media" sap:VirtualizedContainerService.HintSize="434,173" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="{x:Null}" Message="[&quot;[TDD UIElementCheck] -&gt; Not all buttons were found -&gt; [Failed]&quot;]" />
+                      <Assign DisplayName="[UIElementCheck] Assign Bool Result to False" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Assign_2">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Boolean">[Out_Bool_ResultTestCase]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </Sequence>
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+            </TryCatch>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+        </ActivityFunc>
+      </uix:NApplicationCard.OCREngine>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" Version="V2">
+          <uix:TargetApp.Arguments>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.Arguments>
+          <uix:TargetApp.FilePath>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.FilePath>
+          <uix:TargetApp.Selector>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.Selector>
+          <uix:TargetApp.Url>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.Url>
+          <uix:TargetApp.WorkingDirectory>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.WorkingDirectory>
+        </uix:TargetApp>
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

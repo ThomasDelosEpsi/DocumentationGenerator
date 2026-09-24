@@ -1,0 +1,707 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Contract_management" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="In_Dict_ConfigDatatables" Type="InArgument(scg:Dictionary(x:String, sd:DataTable))" />
+    <x:Property Name="In_S_AssistantName" Type="InArgument(x:String)" />
+    <x:Property Name="In_S_AssistantMail" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>Contract_management_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Activities.System.FileOperations</x:String>
+      <x:String>UiPath.Activities.System.Encode</x:String>
+      <x:String>UiPath.Activities.System.Compression.Workflow</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.IO.Compression</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Globalization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.IO.Compression</AssemblyReference>
+      <AssemblyReference>System.IO.Compression.Brotli</AssemblyReference>
+      <AssemblyReference>System.IO.Compression.ZipFile</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Contract_management" sap:VirtualizedContainerService.HintSize="1228,3948" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="Datatable_SuppliersContact" />
+      <Variable x:TypeArguments="sd:DataTable" Name="Datatable_Logs" />
+      <Variable x:TypeArguments="x:Boolean" Name="Boolean_AllMailAlreadySend" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Invoking the workflow to read the logs" DisplayName="[Contract Management] Invoke Read Logs" sap:VirtualizedContainerService.HintSize="618,208" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Addons\Logs\Read logs.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="Out_Datatable_Logs">[Datatable_Logs]</OutArgument>
+        <OutArgument x:TypeArguments="x:Boolean" x:Key="Out_Boolean_TestCase" />
+      </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeWorkflowFile>
+    <Assign sap2010:Annotation.AnnotationText="Boolean that checks if the log exists in the CSV file&#xA;&#xA;AssistantName,&#xA;Sending Mail,&#xA;All emails have been sent successfully&#xA;Datenow(dd/MM/yyyy)" DisplayName="[Contract Management] Assign Boolean Mail Already Send" sap:VirtualizedContainerService.HintSize="618,285" sap2010:WorkflowViewState.IdRef="Assign_5">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Boolean">[Boolean_AllMailAlreadySend]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Boolean">[Datatable_Logs.AsEnumerable().Any(Function(r) r("Assistante").ToString = In_S_AssistantName And r("Action").ToString = "Sending Mail" And r("Message").ToString = "All emails have been sent successfully" And r("Date").ToString = Date.Now.ToString("dd/MM/yyyy"))]</InArgument>
+      </Assign.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Assign>
+    <If sap2010:Annotation.AnnotationText="If the log exists showing that all emails have already been sent, then we do nothing; otherwise, we send the contracts to the suppliers." Condition="[Boolean_AllMailAlreadySend = False]" DisplayName="[Contract Management] If Log exist" sap:VirtualizedContainerService.HintSize="618,3266" sap2010:WorkflowViewState.IdRef="If_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence DisplayName="[Contract Management] Then send mail to suppliers" sap:VirtualizedContainerService.HintSize="616,2799" sap2010:WorkflowViewState.IdRef="Sequence_14">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Arg -&gt; Dict_ConfigDatatables(&quot;SharePoint URL) for 'repertoire fournisseur' url" DisplayName="[Contract Management] Invoke 'Repertoire fournisseur'" sap:VirtualizedContainerService.HintSize="582,222" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Addons\Initialization\Download Repertoire Fournisseur.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="scg:Dictionary(x:String, sd:DataTable)" x:Key="In_Dict_ConfigDatatables">[In_Dict_ConfigDatatables]</InArgument>
+              <OutArgument x:TypeArguments="sd:DataTable" x:Key="Out_Datatable_SuppliersContact">[Datatable_SuppliersContact]</OutArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:InvokeWorkflowFile>
+          <ui:ForEachFileX sap2010:Annotation.AnnotationText="Only if there is a ZIP file: We have just unzipped all the PDF files." DisplayName="[Contract Management] For each files in current assistant ZIP" Filter="*.zip" Folder="[Cons_TemporaryFolder+&quot;\&quot;+In_S_AssistantName]" sap:VirtualizedContainerService.HintSize="582,88" sap2010:WorkflowViewState.IdRef="ForEachFileX_3" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+            <ui:ForEachFileX.Body>
+              <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
+                <ActivityAction.Argument1>
+                  <DelegateInArgument x:TypeArguments="si:FileInfo" Name="CurrentZIP" />
+                </ActivityAction.Argument1>
+                <ActivityAction.Argument2>
+                  <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                </ActivityAction.Argument2>
+                <Sequence DisplayName="[Contract Management] Do in For each files in current assistant ZIP" sap:VirtualizedContainerService.HintSize="454,447" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="[Contract Management] Log Unzipp" sap:VirtualizedContainerService.HintSize="420,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;[Contract Management] -&gt; Unzipp files.&quot;]" />
+                  <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Unzips a ZIP file containing folders and files,&#xA;Zip &gt; Folders &gt; Files&#xA;Retrieves all the files (in all subfolders)&#xA;And copies them to a folder specific to the assistant&#xA;Delete zip at the end" Code="' Dossier final dynamique déjà créé&#xA;Dim finalPath As String = System.IO.Path.Combine(&quot;C:\Users&quot;, Environment.UserName, &quot;Downloads&quot;, &quot;CooperationContractTemporary&quot;, In_S_AssistantName)&#xA;&#xA;' Dossier temporaire pour extraire le ZIP&#xA;Dim tempExtractPath As String = System.IO.Path.Combine(System.IO.Path.GetTempPath(), &quot;TempZipExtraction&quot;)&#xA;If System.IO.Directory.Exists(tempExtractPath) Then&#xA;    System.IO.Directory.Delete(tempExtractPath, True)&#xA;End If&#xA;System.IO.Directory.CreateDirectory(tempExtractPath)&#xA;&#xA;' Extraire le ZIP&#xA;System.IO.Compression.ZipFile.ExtractToDirectory(In_S_ZipPath, tempExtractPath)&#xA;&#xA;' Récupérer tous les fichiers dans tous les sous-dossiers&#xA;Dim allFiles As String() = System.IO.Directory.GetFiles(tempExtractPath, &quot;*.*&quot;, System.IO.SearchOption.AllDirectories)&#xA;&#xA;' Copier chaque fichier dans le dossier final&#xA;For Each file As String In allFiles&#xA;    Dim destFile As String = System.IO.Path.Combine(finalPath, System.IO.Path.GetFileName(file))&#xA;    System.IO.File.Copy(file, destFile, True)&#xA;Next&#xA;&#xA;' Supprimer le fichier ZIP original&#xA;If System.IO.File.Exists(In_S_ZipPath) Then&#xA;    System.IO.File.Delete(In_S_ZipPath)&#xA;End If" DisplayName="[Contract Management] Invode Code Unzipp files" sap:VirtualizedContainerService.HintSize="420,298" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+                    <ui:InvokeCode.Arguments>
+                      <InArgument x:TypeArguments="x:String" x:Key="In_S_AssistantName">[In_S_AssistantName]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="In_S_ZipPath">[CurrentZIP.FullName]</InArgument>
+                    </ui:InvokeCode.Arguments>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:InvokeCode>
+                </Sequence>
+              </ActivityAction>
+            </ui:ForEachFileX.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ForEachFileX>
+          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="582,118" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Envoie des emails aux fournisseurs.&quot;]" />
+          <ui:ForEachFileX sap2010:Annotation.AnnotationText="Only if there is a ZIP file: We have just unzipped all the PDF files." DisplayName="[Contract Management] For each files in current assistant PDF" Filter="*.pdf" Folder="[Cons_TemporaryFolder+&quot;\&quot;+In_S_AssistantName]" sap:VirtualizedContainerService.HintSize="582,2122" sap2010:WorkflowViewState.IdRef="ForEachFileX_4" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+            <ui:ForEachFileX.Body>
+              <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
+                <ActivityAction.Argument1>
+                  <DelegateInArgument x:TypeArguments="si:FileInfo" Name="CurrentPDF" />
+                </ActivityAction.Argument1>
+                <ActivityAction.Argument2>
+                  <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                </ActivityAction.Argument2>
+                <Sequence DisplayName="[Contract Management] Do in For each files in current assistant PDF" sap:VirtualizedContainerService.HintSize="548,1794" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="S_SupplierNumber" />
+                    <Variable x:TypeArguments="x:String" Name="S_SupplierMail" />
+                    <Variable x:TypeArguments="x:String" Name="S_Subject" />
+                    <Variable x:TypeArguments="x:String" Name="S_Body" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap2010:Annotation.AnnotationText="We retrieve the first group of numbers between &quot;-&quot; on file name" DisplayName="[Contract Management] Assign regex for suppliers number" sap:VirtualizedContainerService.HintSize="514,220" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[S_SupplierNumber]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(CurrentPDF.Name, "-(\d+)-").Groups(1).Value]</InArgument>
+                    </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Assign>
+                  <Assign sap2010:Annotation.AnnotationText="Use a linQ query that will match the 'Supplier Code' column with the S_SupplierNumber code and retrieve the email address from the 'Business Email' column of the Datatable_SuppliersContact datatable." DisplayName="[Contract Management] Assign recovery mail" sap:VirtualizedContainerService.HintSize="514,269" sap2010:WorkflowViewState.IdRef="Assign_3">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[S_SupplierMail]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String" xml:space="preserve">[(From r In Datatable_SuppliersContact.AsEnumerable()
+                   Let code = If(IsDBNull(r("Code Fournisseur")), "", r("Code Fournisseur").ToString)
+                   Where code = S_SupplierNumber.Trim
+                   Let mail = If(IsDBNull(r("Mail commercial")), "", r("Mail commercial").ToString)
+                   Select mail).FirstOrDefault()]</InArgument>
+                    </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Assign>
+                  <If sap2010:Annotation.AnnotationText="Sending Contracts" Condition="[String.IsNullOrEmpty(S_SupplierMail)]" DisplayName="[Contract Management] If supplier contact not found" sap:VirtualizedContainerService.HintSize="514,1245" sap2010:WorkflowViewState.IdRef="If_1">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Sequence sap2010:Annotation.AnnotationText="If the email is empty, the contract is sent to the designated assistant." DisplayName="[Contract Management] Then send mail to assistant" sap:VirtualizedContainerService.HintSize="512,557" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:MultipleAssign DisplayName="[Contract Management] Multiple assign Subject &amp; Body Assistant" sap:VirtualizedContainerService.HintSize="478,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                          <ui:MultipleAssign.AssignOperations>
+                            <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                                <ui:AssignOperation.To>
+                                  <OutArgument x:TypeArguments="x:String">[S_Subject]</OutArgument>
+                                </ui:AssignOperation.To>
+                                <ui:AssignOperation.Value>
+                                  <InArgument x:TypeArguments="x:String">["Contrat coopération commerciale promo "+Date.Now.ToString("MMMM", System.Globalization.CultureInfo.GetCultureInfo("fr-FR")).ToString]</InArgument>
+                                </ui:AssignOperation.Value>
+                              </ui:AssignOperation>
+                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                                <ui:AssignOperation.To>
+                                  <OutArgument x:TypeArguments="x:String">[S_Body]</OutArgument>
+                                </ui:AssignOperation.To>
+                                <ui:AssignOperation.Value>
+                                  <InArgument x:TypeArguments="x:String" xml:space="preserve">&lt;!doctype html&gt;
+&lt;html lang='fr'&gt;
+&lt;head&gt;
+&lt;meta charset='utf-8'&gt;
+&lt;meta name='viewport' content='width=device-width,initial-scale=1'&gt;
+&lt;title&gt;Notification Contrat Coopération Commerciale&lt;/title&gt;
+&lt;style&gt;
+    /* Styles inline-friendly et simples pour clients mail */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f6f6f6;
+      font-family: Jost, Regular, sans-serif;
+      color: #222222;
+    }
+    .container {
+      width: 100%;
+      max-width: 680px;
+      margin: 24px auto;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+    .header {
+      background-color: #2D2E87;
+      color: #ffffff;
+      padding: 18px 24px;
+      text-align: left;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .content {
+      padding: 20px 24px;
+      line-height: 1.45;
+      font-size: 15px;
+      color: #333333;
+    }
+    .btn {
+      display: inline-block;
+      margin: 18px 0;
+      padding: 12px 18px;
+      background-color: #9AC31C;
+      color: #ffffff !important;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    .note {
+      font-size: 13px;
+      color: #666666;
+      margin-top: 8px;
+    }
+    .footer {
+      padding: 14px 24px;
+      font-size: 13px;
+      color: #777777;
+      background: #fafafa;
+      text-align: left;
+    }
+    .muted {
+      color: #2D2E87;
+      font-size: 13px;
+    }
+    @media only screen and (max-width: 480px) {
+      .content { padding: 16px; font-size: 15px; }
+      .header { padding: 14px; }
+      .btn { width: 100%; text-align: center; box-sizing: border-box; }
+    }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;table role='presentation' width='100%' cellspacing='0' cellpadding='0' border='0' style='background:#f6f6f6;'&gt;
+&lt;tr&gt;
+&lt;td align='center'&gt;
+&lt;table role='presentation' class='container' cellspacing='0' cellpadding='0' border='0'&gt;
+&lt;tr&gt;
+&lt;td class='header'&gt;
+&lt;h1&gt;Notification Contract Coopération Commerciale&lt;/h1&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class='content'&gt;
+&lt;div style='margin-top:8px;' class='muted'&gt;Cet e-mail est généré automatiquement — merci de ne pas y répondre.&lt;/div&gt;
+&lt;p&gt;Cher(e) assistant(e),&lt;/p&gt;
+ 
+              &lt;p&gt;Le Robot &lt;strong&gt;Contrat Coopération Commerciale&lt;/strong&gt; envoie actuellement les contrats. Cependant, il n’existe pas d’adresse e-mail de contact pour ce fournisseur, c’est pourquoi le contrat vient de vous être envoyé en pièce jointe.&lt;/p&gt;
+ 
+              &lt;p&gt;Je t’invite à vérifier le fichier, en cliquant sur le lien ci-dessous pour un accès rapide :&lt;/p&gt;
+&lt;div style='text-align: center;'&gt;
+&lt;a class='btn'  href='https://lyreco.sharepoint.com/:x:/r/sites/FR.OG.MKT.Produits2/_layouts/15/Doc.aspx?sourcedoc=%7B1CB26D57-720E-46E5-B4B0-8682D73E253C%7D&amp;file=repertoire%20fournisseurs.xlsx&amp;action=default&amp;mobileredirect=true' &gt;Accéder au fichier répertoire fournisseur&lt;/a&gt;
+&lt;/div&gt;
+ 
+              &lt;p&gt;Je te remercie par avance et te souhaite une excellente journée.&lt;/p&gt;
+ 
+              &lt;p&gt;Cordialement,&lt;br&gt;
+              [LM] L'équipe RPA &amp; OCR  &lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class='footer'&gt;
+&lt;div&gt;Besoin d’aide ? Envoie un email à l'équipe RPA &amp; OCR.&lt;/div&gt;
+&lt;div style='margin-top:8px;' class='muted'&gt;Cet e-mail est généré automatiquement — merci de ne pas y répondre.&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;div style='margin:14px 0; font-size:12px; color:#aaaaaa; text-align:center;'&gt;
+          Contract Coopération Commerciale - Lyreco Management Team RPA &amp; OCR
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</InArgument>
+                                </ui:AssignOperation.Value>
+                              </ui:AssignOperation>
+                            </scg:List>
+                          </ui:MultipleAssign.AssignOperations>
+                        </ui:MultipleAssign>
+                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="478,57" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                          <ui:CommentOut.Body>
+                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,289" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="If no email is found, then the assistant's email is passed as an argument in order to send her the contract." DisplayName="FOR TEST" sap:VirtualizedContainerService.HintSize="416,229" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Addons\Sending Emails\Sending Email Suppliers.xaml">
+                                <ui:InvokeWorkflowFile.Arguments>
+                                  <InArgument x:TypeArguments="x:String" x:Key="In_S_Contact">dimitri.degroise@lyreco.com</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="In_S_Subject">[S_Subject]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="In_S_Body">[S_Body]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="In_S_Attachment">[CurrentPDF.FullName]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="In_S_CCContact" />
+                                  <InArgument x:TypeArguments="x:String" x:Key="In_S_AssistantName">[In_S_AssistantName]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="In_S_SupplierNumber">[S_SupplierNumber]</InArgument>
+                                </ui:InvokeWorkflowFile.Arguments>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:InvokeWorkflowFile>
+                            </Sequence>
+                          </ui:CommentOut.Body>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:CommentOut>
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="If no email is found, then the assistant's email is passed as an argument in order to send her the contract. No CC for this case." DisplayName="[Contract Management] Invoke Sending Mail for Assistant" sap:VirtualizedContainerService.HintSize="478,229" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Addons\Sending Emails\Sending Email Suppliers.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <InArgument x:TypeArguments="x:String" x:Key="In_S_Contact">[In_S_AssistantMail]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="In_S_Subject">[S_Subject]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="In_S_Body">[S_Body]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="In_S_Attachment">[CurrentPDF.FullName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="In_S_CCContact" />
+                            <InArgument x:TypeArguments="x:String" x:Key="In_S_AssistantName">[In_S_AssistantName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="In_S_SupplierNumber">[S_SupplierNumber]</InArgument>
+                          </ui:InvokeWorkflowFile.Arguments>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:InvokeWorkflowFile>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap2010:Annotation.AnnotationText="Otherwise, we send the contract to the suppliers with the assistant copied." DisplayName="[Contract Management] Else send mail to suppliers" sap:VirtualizedContainerService.HintSize="512,527" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:MultipleAssign DisplayName="[Contract Management] Multiple assign Subject &amp; Body Suppliers" sap:VirtualizedContainerService.HintSize="478,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                          <ui:MultipleAssign.AssignOperations>
+                            <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                                <ui:AssignOperation.To>
+                                  <OutArgument x:TypeArguments="x:String">[S_Subject]</OutArgument>
+                                </ui:AssignOperation.To>
+                                <ui:AssignOperation.Value>
+                                  <InArgument x:TypeArguments="x:String">["Contrat coopération commerciale promo "+Date.Now.ToString("MMMM", System.Globalization.CultureInfo.GetCultureInfo("fr-FR")).ToString]</InArgument>
+                                </ui:AssignOperation.Value>
+                              </ui:AssignOperation>
+                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                                <ui:AssignOperation.To>
+                                  <OutArgument x:TypeArguments="x:String">[S_Body]</OutArgument>
+                                </ui:AssignOperation.To>
+                                <ui:AssignOperation.Value>
+                                  <InArgument x:TypeArguments="x:String" xml:space="preserve">["&lt;!doctype html&gt;
+&lt;html lang='fr'&gt;
+&lt;head&gt;
+&lt;meta charset='utf-8'&gt;
+&lt;meta name='viewport' content='width=device-width,initial-scale=1'&gt;
+&lt;title&gt;Notification Contrat Coopération Commerciale&lt;/title&gt;
+&lt;style&gt;
+    /* Styles inline-friendly et simples pour clients mail */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f6f6f6;
+      font-family: Jost, Regular, sans-serif;
+      color: #222222;
+    }
+    .container {
+      width: 100%;
+      max-width: 680px;
+      margin: 24px auto;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+    .header {
+      background-color: #2D2E87;
+      color: #ffffff;
+      padding: 18px 24px;
+      text-align: left;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .content {
+      padding: 20px 24px;
+      line-height: 1.45;
+      font-size: 15px;
+      color: #333333;
+    }
+    .btn {
+      display: inline-block;
+      margin: 18px 0;
+      padding: 12px 18px;
+      background-color: #9AC31C;
+      color: #ffffff !important;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    .note {
+      font-size: 13px;
+      color: #666666;
+      margin-top: 8px;
+    }
+    .footer {
+      padding: 14px 24px;
+      font-size: 13px;
+      color: #777777;
+      background: #fafafa;
+      text-align: left;
+    }
+    .muted {
+      color: #2D2E87;
+      font-size: 13px;
+    }
+    @media only screen and (max-width: 480px) {
+      .content { padding: 16px; font-size: 15px; }
+      .header { padding: 14px; }
+      .btn { width: 100%; text-align: center; box-sizing: border-box; }
+    }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;table role='presentation' width='100%' cellspacing='0' cellpadding='0' border='0' style='background:#f6f6f6;'&gt;
+&lt;tr&gt;
+&lt;td align='center'&gt;
+&lt;table role='presentation' class='container' cellspacing='0' cellpadding='0' border='0'&gt;
+&lt;tr&gt;
+&lt;td class='header'&gt;
+&lt;h1&gt;Contrat coopération commerciale promo "+Date.Now.ToString("MMMM", System.Globalization.CultureInfo.GetCultureInfo("fr-FR")).ToString+"&lt;/h1&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class='content'&gt;
+&lt;pBonjour,&lt;/p&gt;
+ 
+&lt;p&gt;Merci de trouver ci-joint le contrat de coopération commerciale.&lt;/p&gt;
+&lt;p&gt;Conformément à nos accords, merci de le retourner signer à fr.mkt.rpa@lyreco.com ainsi qu'à l'assistante Marketing produit.&lt;/p&gt;
+&lt;p&gt;Bonne journée&lt;/p&gt;
+ 
+              &lt;p&gt;Cordialement,&lt;br&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+"]</InArgument>
+                                </ui:AssignOperation.Value>
+                              </ui:AssignOperation>
+                            </scg:List>
+                          </ui:MultipleAssign.AssignOperations>
+                        </ui:MultipleAssign>
+                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="478,57" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                          <ui:CommentOut.Body>
+                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,259" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Send the email to the supplier" DisplayName="FOR TEST" sap:VirtualizedContainerService.HintSize="416,199" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Addons\Sending Emails\Sending Email Suppliers.xaml">
+                                <ui:InvokeWorkflowFile.Arguments>
+                                  <InArgument x:TypeArguments="x:String" x:Key="In_S_Contact">dimitri.degroise@lyreco.com</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="In_S_Subject">[S_Subject]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="In_S_Body">[S_Body]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="In_S_Attachment">[CurrentPDF.FullName]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="In_S_CCContact">dimitri.degroise@lyreco.com</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="In_S_AssistantName">[In_S_AssistantName]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="In_S_SupplierNumber">[S_SupplierNumber]</InArgument>
+                                </ui:InvokeWorkflowFile.Arguments>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:InvokeWorkflowFile>
+                            </Sequence>
+                          </ui:CommentOut.Body>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:CommentOut>
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Send the email to the supplier" DisplayName="[Contract Management] Invoke Sending Mail for Suppliers" sap:VirtualizedContainerService.HintSize="478,199" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Addons\Sending Emails\Sending Email Suppliers.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <InArgument x:TypeArguments="x:String" x:Key="In_S_Contact">[S_SupplierMail]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="In_S_Subject">[S_Subject]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="In_S_Body">[S_Body]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="In_S_Attachment">[CurrentPDF.FullName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="In_S_CCContact">[In_S_AssistantMail]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="In_S_AssistantName">[In_S_AssistantName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="In_S_SupplierNumber">[S_SupplierNumber]</InArgument>
+                          </ui:InvokeWorkflowFile.Arguments>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:InvokeWorkflowFile>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </ActivityAction>
+            </ui:ForEachFileX.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ForEachFileX>
+          <ui:AppendLine File="{x:Null}" sap2010:Annotation.AnnotationText="We add the log to the file that email send" DisplayName="[Contract Management] Append Line mail send" FileName="[Cons_LogPath]" sap:VirtualizedContainerService.HintSize="582,189" sap2010:WorkflowViewState.IdRef="AppendLine_1" Text="[In_S_AssistantName+&quot;,Sending Mail,All emails have been sent successfully,&quot;+Date.Now.ToString(&quot;dd/MM/yyyy&quot;)]" UseDefaultEncoding="False">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:AppendLine>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence DisplayName="[Contract Management] Else Return to main process" sap:VirtualizedContainerService.HintSize="616,283" sap2010:WorkflowViewState.IdRef="Sequence_15">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="[Contract Management] Log End before return" sap:VirtualizedContainerService.HintSize="582,175" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;[Contract Management] -&gt; [&quot;+In_S_AssistantName+&quot;] -&gt; Everything has been done.&quot;]" />
+          <ui:Return DisplayName="[Contract Management] Return mail already send" sap:VirtualizedContainerService.HintSize="582,48" sap2010:WorkflowViewState.IdRef="Return_1" />
+        </Sequence>
+      </If.Else>
+    </If>
+    <ui:LogMessage DisplayName="[Contract Management] Log End" sap:VirtualizedContainerService.HintSize="618,166" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;[Contract Management] -&gt; [&quot;+In_S_AssistantName+&quot;] -&gt; Everything has been done.&quot;]" />
+  </Sequence>
+</Activity>
